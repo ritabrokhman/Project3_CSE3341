@@ -1,3 +1,4 @@
+// Provided by Tim Carpenter
 class Term {
 	Factor factor;
 	Term term;

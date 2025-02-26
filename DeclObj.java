@@ -1,3 +1,4 @@
+// Provided by Tim Carpenter
 class DeclObj {
 	Id id;
 	

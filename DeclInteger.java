@@ -1,3 +1,4 @@
+// Provided by Tim Carpenter
 class DeclInteger {
 	Id id;
 	

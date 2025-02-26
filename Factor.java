@@ -1,3 +1,4 @@
+// Provided by Tim Carpenter
 class Factor {
 	Id id;
 	String key;

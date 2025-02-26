@@ -1,3 +1,4 @@
+// Provided by Tim Carpenter
 class Main {
 	public static void main(String[] args) {
 		// Initialize the scanner with the input file

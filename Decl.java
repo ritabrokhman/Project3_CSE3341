@@ -1,3 +1,4 @@
+// Provided by Tim Carpenter
 class Decl implements Stmt {
 	DeclInteger declInt;
 	DeclObj declObj;

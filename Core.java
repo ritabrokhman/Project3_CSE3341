@@ -1,3 +1,4 @@
+// Provided by Tim Carpenter
 // This enum represents our tokens
 enum Core {
 	// Keywords
