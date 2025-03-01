@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 // Class to execute parsed Core programs
 class Executor {
-    private Memory memory; // Instance of Memory to store variables
-    private static Scanner dataScanner; // Scanner to read input from a .data file
+    // Instance of Memory to store variables
+    private Memory memory; 
+    // Scanner to read input from a .data file
+    private static Scanner dataScanner; 
 
     public Executor(String dataFile) {
         memory = new Memory();
