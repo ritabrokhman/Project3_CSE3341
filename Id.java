@@ -11,4 +11,8 @@ class Id {
 	void print() {
 		System.out.print(identifier);
 	}
+
+	String getName() {
+		return identifier;
+	}
 }

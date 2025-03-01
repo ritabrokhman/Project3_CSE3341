@@ -18,4 +18,13 @@ class DeclSeq {
 			ds.print(indent);
 		}
 	}
+
+	void execute(Memory memory) {
+        if (decl != null) {
+            decl.execute(memory);
+        }
+        if (ds != null) { 
+            ds.execute(memory);
+        }
+    }
 }

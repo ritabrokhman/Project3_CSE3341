@@ -56,4 +56,13 @@ class Loop implements Stmt {
 		}
 		System.out.println("end");
 	}
+	
+	public void execute(Memory memory) {
+        memory.assign(id.getName(), initial.evaluate(memory));
+        while (cond.evaluate(memory)) {
+            ss.execute(memory);
+            memory.assign(id.getName(), update.evaluate(memory));
+        }
+    }
+
 }

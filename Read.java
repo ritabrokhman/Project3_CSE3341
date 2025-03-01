@@ -23,4 +23,8 @@ class Read implements Stmt {
 		argument.print();
 		System.out.println(");");
 	}
+
+	public void execute(Memory memory) {
+        memory.assign(argument.getName(), Executor.readInput());
+    }
 }

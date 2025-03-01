@@ -29,4 +29,15 @@ class Expr {
 			expr.print();
 		}
 	}
+
+	int evaluate(Memory memory) {
+		int value = term.evaluate(memory);
+		if (option == 1) {
+			value += expr.evaluate(memory);
+		} else if (option == 2) {
+			value -= expr.evaluate(memory);
+		}
+		return value;
+	}
+	
 }

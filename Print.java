@@ -23,4 +23,8 @@ class Print implements Stmt {
 		expr.print();
 		System.out.println(");");
 	}
+
+	public void execute(Memory memory) {
+        System.out.println(expr.evaluate(memory));
+    }
 }

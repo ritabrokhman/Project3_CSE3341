@@ -32,4 +32,14 @@ class Cmpr {
 		}
 		expr2.print();
 	}
+	public boolean evaluate(Memory memory) {
+        int evalExpr1 = expr1.evaluate(memory);  
+        int evalExpr2 = expr2.evaluate(memory);  
+
+        switch (option) {
+            case 0: return evalExpr1 == evalExpr2;  
+            case 1: return evalExpr1 < evalExpr2; 
+            default: return false;
+        }
+    }
 }

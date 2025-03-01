@@ -43,4 +43,13 @@ class If implements Stmt {
 		}
 		System.out.println("end");
 	}
+
+	public void execute(Memory memory) {
+		if (cond.evaluate(memory)) {
+			ss1.execute(memory);
+			// Check if `else` branch exists
+		} else if (ss2 != null) {
+			ss2.execute(memory);
+		}
+	}
 }

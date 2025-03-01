@@ -19,4 +19,8 @@ class DeclObj {
 		id.print();
 		System.out.println(";");
 	}
+
+	public void execute(Memory memory) {
+        memory.declareObject(id.getName()); 
+    }
 }

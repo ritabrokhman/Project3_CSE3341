@@ -4,6 +4,7 @@ class Factor {
 	String key;
 	int constant;
 	Expr expr;
+	private int value;
 	
 	void parse() {
 		if (Parser.scanner.currentToken() == Core.ID) {
@@ -45,4 +46,23 @@ class Factor {
 			System.out.print(constant);
 		}
 	}
+
+	int evaluate(Memory memory) {
+		if (id != null) {
+			if (key != null) {
+				// Handle id[string] case
+				return memory.getObjectValue(id.getName(), key);
+			} else {
+				// Handle simple id case
+				return memory.getValue(id.getName());
+			}
+		} else if (expr != null) {
+			// Handle (expr) case
+			return expr.evaluate(memory);
+		} else {
+			// Handle constant case
+			return constant;
+		}
+	}
+	
 }

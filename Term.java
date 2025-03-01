@@ -29,4 +29,21 @@ class Term {
 			term.print();
 		}
 	}
+
+	int evaluate(Memory memory) {
+		int value = factor.evaluate(memory);
+		if (option == 1) {
+			// Multiplication
+			value = value * term.evaluate(memory);
+		} else if (option == 2) {
+			// Division
+			int divisor = term.evaluate(memory);
+			if (divisor == 0) {
+				throw new RuntimeException("ERROR: Division by zero");
+			}
+			value = value / divisor;
+		}
+		return value;
+	}
+	
 }

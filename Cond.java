@@ -52,4 +52,19 @@ class Cond {
 			}
 		}
 	}
+
+	boolean evaluate(Memory memory) {
+        if (option == 1) {
+            return !cond.evaluate(memory);
+        } else if (option == 2) {
+            return cond.evaluate(memory);
+        } else if (option == 3) {
+            return cmpr.evaluate(memory) || cond.evaluate(memory);
+        } else if (option == 4) {
+            return cmpr.evaluate(memory) && cond.evaluate(memory);
+        } else {
+            return cmpr.evaluate(memory);
+        }
+    }
+	
 }

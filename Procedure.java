@@ -25,12 +25,19 @@ class Procedure {
 		Parser.expectedToken(Core.EOS);
 	}
 	void print() {
-		System.out.println("procedure " + name + " is");
-		if (ds != null) {
-			ds.print(1);
-		}
-		System.out.println("begin ");
-		ss.print(1);
-		System.out.println("end");
+		 System.out.println("procedure " + name + " is");
+		 if (ds != null) {
+		 	ds.print(1);
+		 }
+		 System.out.println("begin ");
+		 ss.print(1);
+		 System.out.println("end");
 	}
+
+	void execute(Memory memory) {
+        if (ds != null) {
+            ds.execute(memory);
+        }
+        ss.execute(memory);
+    }
 }

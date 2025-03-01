@@ -3,4 +3,5 @@
 interface Stmt {
 	void parse();
 	void print(int indent);
+	void execute(Memory memory);
 }
